@@ -1,0 +1,56 @@
+<div class="bg-img">
+
+<h1>Register:</h1>
+    
+    <div id="first">
+      <form [formGroup]="newUser" (ngSubmit)="addUser()">
+      <label>ID Number:</label>
+      <input  class="form-control" type="text"  placeholder="ID Number"   formControlName="IDnumber">
+      <br>
+      <label>Email:</label>
+      <input class="form-control" type="email"  placeholder="Email"  formControlName="Email">
+      <br>
+      <label>Password:</label>
+      <input class="form-control" type="password"  placeholder="Password"  formControlName="Password">
+      <br>
+      <label>Confirm Password:</label>
+      <input  class="form-control" type="password"  placeholder="Confirm Password" >
+      <br>
+      <button type="button" class="btn btn-success" (click)="toggleShow()">Next</button>
+      <br>
+    <!--  [disabled]="!newUser.valid" -->
+    
+    <div id="next"  *ngIf="isShown"> 
+      <label>First Name:</label>
+      <input type="text" class="form-control" placeholder="First Name"  autofocus  formControlName="firstName">
+      <br>
+      <label>Last Name:</label>
+      <input type="text" class="form-control" placeholder="Last Name"   formControlName="lastName">
+      <br>
+      <label>City:</label>
+      <select   class="form-control" placeholder="City"  formControlName="City"> 
+        <option value="Jerusalem">Jerusalem</option>
+        <option value="Tel Aviv">Tel Aviv</option>
+        <option value="Haifa">Haifa</option>
+        <option value="Ashdod">Ashdod</option>
+        <option value="Rishon LeẔiyon">Rishon LeẔiyon</option>  
+        <option value="Beer-Sheva">Beer Sheva</option> 
+        <option value="Petah Tikvah">Petah Tikvah</option> 
+        <option value="Ariel">Ariel</option> 
+        <option value="Eilat">Eilat</option> 
+        <option value="Acco">Acco</option> 
+      </select>
+      <br>
+      <label>Address: </label>
+      <input  class="form-control" type="text"  placeholder="Address"  formControlName="Address">
+      <br>
+      <input type="submit" (click)="addUser()"  class="btn btn-success" value="Click on Me to Register" routerLink="/store">
+    </div>
+      
+    </form>
+
+    
+
+  <!--  <h5>{{newUser.value | json}}</h5> -->
+
+  </div>

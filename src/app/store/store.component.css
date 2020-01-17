@@ -1,0 +1,23 @@
+
+img{
+  background-image: url('https://previews.123rf.com/images/kurhan/kurhan1510/kurhan151001138/46515661-grocery-shopping-cart-with-vegetables-and-fruits-isolated-on-white-.jpg') ;}
+
+div{
+    border: 2px solid darkblue;
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: fit-content;
+    height: 400 px;
+}
+
+img{
+    border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  height: 150px;
+
+}
+

@@ -1,0 +1,64 @@
+  <app-navbar></app-navbar>
+  
+  <app-panel></app-panel>
+
+  <div class="img">
+
+
+    
+
+    <h1 *ngIf="!products">loading...</h1>
+
+    <div *ngFor="let i of products" id>
+      <h6>{{i.ProductName}}</h6>
+      
+      <h6>{{i.Price|currency:"ILS":"symbol" }}</h6>
+      <img src="{{i.Picture}}" >
+      <p>{{i.ProductID}}</p>
+      <br>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#staticBackdrop">
+        Add to Cart
+      </button>
+  </div>
+    
+    
+
+
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Product Name</h5>
+       
+      </div>
+      <div class="modal-body">
+        <label>Quantity:</label>
+      <select  placeholder="Quantity"> 
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>  
+        <option value="6">6</option> 
+        <option value="7">7</option> 
+        <option value="8">8</option> 
+        <option value="9">9</option> 
+        <option value="10">10</option> 
+      </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+     
+     
+        
+
+    

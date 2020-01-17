@@ -1,0 +1,26 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+ 
+  }
+
+  .flex-container > div {
+    
+    margin: 30px;
+    text-align: center;
+    
+   
+  }
+
+ 
+
+  .bg-img{
+    min-height: 100vh;
+   width: 100%;
+   background-color: rgb(56, 194, 194);
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   }
